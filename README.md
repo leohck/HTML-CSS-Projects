@@ -1,2 +1,2 @@
 # HTML-CSS-Projects
-HTML and CSSS files
+HTML and CSS files
