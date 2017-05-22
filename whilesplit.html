@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>while</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var cont,contate,deseja;
+cont =1;
+contate=prompt("digite o maximo da contagem");
+while(cont <=contate){
+document.write(cont+"<br>");
+cont++;
+}
+deseja=prompt("Deseja continuar?,até quanto?");
+deseja=deseja.split(",");
+
+if(deseja[0]=="sim"){
+while(cont<=deseja[1]){
+document.write(cont+"<br>");
+cont++
+}
+}
+</script>
+</body>
+</html>

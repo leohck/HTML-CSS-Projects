@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>formulario</title>
+<link rel='stylesheet' type='text/css' href='new.css'>
+<script type='text/javascript'>
+
+function validar(){
+limpacores();
+var n,i,e;
+n=document.form1.txtnome.value;
+i=document.form1.txtidade.value;
+e=document.form1.txtemail.value;
+ if(n.length==0){
+ alert('preencha o campo nome' );
+ document.form1.txtnome.focus();
+ document.form1.txtnome.style.background="#FFB6C1";
+return false;
+ }
+ if(isNaN(i)|| i.length==0){ 
+alert('preencha o campo idade,com apenas numeros');
+document.form1.txtidade.focus();
+document.form1.txtidade.style.background="#ffb6c1";
+document.form1.txtidade.value="";
+return false;		
+}
+ if(e.indexOf("@")<0){
+alert('preencha o campo email corretamente');
+document.form1.txtemail.focus();
+document.form1.txtemail.style.background="#FFB6C1";
+return false;
+}
+document.form1.submit();
+}
+function limpacores(){ 
+document.form1.txtnome.style.background="#ffffff";
+document.form1.txtidade.style.background="#ffffff";
+document.form1.txtemail.style.background="#ffffff";
+}
+</script>
+</head>
+
+<body>
+<div id='form'>
+<form name='form1' method='post' action='grava.jsp'>
+Nome:
+<input type='text' name='txtnome'><br>
+Idade:
+<input type='text' name='txtidade'><br>
+E-mail:
+<input type='text' name='txtemail'><br>
+<marquee scrolldelay=1 scrollamount=7 direction=right behavior=slide >
+<input id='button' type='button' name='gravar' value='gravar' onclick='validar()'><br> 
+</marquee>
+</div>
+</form>
+</body>
+</html>
+
